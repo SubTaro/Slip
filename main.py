@@ -22,13 +22,13 @@ class Board:
                 print("|", end=" ")
                 if pos == 0:
                     print(" ", end=" ")
-                if pos == 1:
-                    print("□", end=" ")
-                if pos == 2:
-                    print("◇", end=" ")
                 if pos == -1:
-                    print("■", end=" ")
+                    print("□", end=" ")
                 if pos == -2:
+                    print("◇", end=" ")
+                if pos == 1:
+                    print("■", end=" ")
+                if pos == 2:
                     print("◆", end=" ")
                 if i == 4:
                     print("|")
