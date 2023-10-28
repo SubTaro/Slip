@@ -16,7 +16,26 @@ class Board:
         self.board[4, 2] = 2
 
     def print_board(self):
-        print(self.board)
+        for col in self.board:
+            print("---------------------")
+            for i, pos in enumerate(col):
+                print("|", end=" ")
+                if pos == 0:
+                    print(" ", end=" ")
+                if pos == 1:
+                    print("□", end=" ")
+                if pos == 2:
+                    print("◇", end=" ")
+                if pos == -1:
+                    print("■", end=" ")
+                if pos == -2:
+                    print("◆", end=" ")
+                if i == 4:
+                    print("|")
+        print("---------------------")
+
+    def get_board(self):
+        return self.board
 
     # 動かすコマンドを実装
     # "動かすものの座標 + 向き"でコマンドは構成されるものとする
@@ -95,3 +114,4 @@ if __name__ == "__main__":
         board.print_board()
         command = input()
         board.move(command)
+    board.print_board()
